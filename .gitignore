@@ -1,0 +1,6 @@
+# Chặn các file csv nặng trong thư mục data
+data/*.csv
+
+# Hoặc chặn chính xác tên file
+data/mitbih_train.csv
+data/mitbih_test.csv
