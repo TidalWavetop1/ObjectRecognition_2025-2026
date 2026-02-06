@@ -1,0 +1,20 @@
+ECG-Anomaly-Detection/
+├── data/
+│   ├── raw/              # Chứa file csv gốc từ Kaggle
+│   └── processed/        # Dữ liệu sau khi đã chuẩn hóa (MinMaxScaler)
+├── notebooks/
+│   └── exploration.ipynb # Nơi bạn vẽ UMAP và phân tích dữ liệu (EDA)
+├── src/
+│   ├── __init__.py
+│   ├── data_loader.py    # Script đọc csv và phân tách Normal/Anomaly
+│   ├── preprocess.py     # Script normalize và xử lý nhiễu
+│   ├── model.py          # Định nghĩa kiến trúc Autoencoder (Subclassing API)
+│   ├── trainer.py        # Logic huấn luyện (fit model) và lưu history
+│   └── evaluator.py      # Tính Threshold, vẽ Confusion Matrix, ROC-AUC
+├── models/
+│   ├── autoencoder_v1.h5 # Model đã train xong
+│   └── scaler.pkl        # Lưu lại bộ scaler để dùng khi dự đoán thực tế
+├── config/
+│   └── config.yaml       # Chứa tham số: epochs, batch_size, learning_rate
+├── main.py               # File chạy chính để kết nối toàn bộ quy trình
+└── requirements.txt      # Danh sách thư viện: tensorflow, pandas, umap-learn...
