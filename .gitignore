@@ -1,6 +1,14 @@
 # Chặn các file csv nặng trong thư mục data
 data/*.csv
+data/*.zip
+models/*.h5
+models/*.pt
 
 # Hoặc chặn chính xác tên file
 data/mitbih_train.csv
 data/mitbih_test.csv
+
+# Python environment
+__pycache__/
+.venv/
+.env
